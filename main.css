@@ -42,7 +42,7 @@ input{
 	padding:5px 25px 5px 25px;
 }
 
-.goOption{
+.submit{
 	margin-bottom: 10px;
 	font-size:20px;
 	background-color:white;
@@ -55,5 +55,12 @@ input{
 	justify-content: right;
 }
 
+.resultSection{
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+}
 
 

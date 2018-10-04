@@ -13,10 +13,9 @@
 		</div>
 	<button class="addOption">Add</button>
 	</div>
-	<button class="goOption">Go!</button>
-	<div class="resultSection">
-		
-	</div>
+	<div class="resultSection"></div>
+	<button class="submit">Go!</button>
+	
 	<div class="image">
 		<img src="images.jpeg" alt="blabla" height="200" width="300">
 	</div>	
@@ -33,6 +32,19 @@
 		}
 
 		$('.addOption').click(add_option)
+
+		var options = []
+		var submit = function(){
+			$('.inputSection').hide()
+			$('.resultSection').css('display', 'flex')
+			$('input').each(function() {
+				options.push($(this).val())
+			})
+			var winner = options[Math.floor(Math.random() * options.length)]
+			console.log(winner)
+			$('.resultSection').text(winner)
+		}
+		$('.submit').click(submit)
 	})
 </script>
 </body>
